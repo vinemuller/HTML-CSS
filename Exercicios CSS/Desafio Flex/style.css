@@ -13,9 +13,15 @@ body {
     height: 100vh;
 }
 
-h1, h2, p {
+p {
     margin-bottom: 10px;
     text-align: justify;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 2em;
 }
 
 header, section.normal {
@@ -25,4 +31,41 @@ header, section.normal {
 section.flex-content {
     padding: 20px;
     background-color: cornflowerblue;
+
+    display: flex;
+    flex-flow:  column nowrap;
+}
+
+article.text-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+article.media-text {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+}
+
+article > div.text {
+    flex: 1 1 500px;
+}
+
+article > div.media {
+    flex: 1 0 500px;
+}
+
+div.media > img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+div.media > iframe {
+    display: block;
+    margin: auto;
+    padding: 0px 20px;
+
+    width: 90%;
 }
